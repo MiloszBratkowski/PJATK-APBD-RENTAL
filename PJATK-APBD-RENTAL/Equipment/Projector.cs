@@ -1,6 +1,6 @@
 ﻿namespace PJATK_APBD_RENTAL.Models;
 
-public class Projector
+public class Projector : Equipment
 {
     
 }

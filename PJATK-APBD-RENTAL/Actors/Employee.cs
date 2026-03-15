@@ -1,6 +1,6 @@
 ﻿namespace PJATK_APBD_RENTAL.Models;
 
-public class Employee
+public class Employee : User
 {
     
 }

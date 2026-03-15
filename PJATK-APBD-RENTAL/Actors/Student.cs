@@ -1,6 +1,6 @@
 ﻿namespace PJATK_APBD_RENTAL.Models;
 
-public class Student
+public class Student : User
 {
-    
+    private int index;
 }
