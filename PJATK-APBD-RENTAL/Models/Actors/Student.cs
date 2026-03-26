@@ -1,6 +1,10 @@
-﻿namespace PJATK_APBD_RENTAL.Models;
+﻿namespace PJATK_APBD_RENTAL.Models.Actors;
 
 public class Student : User
 {
-    private int index;
+    public override int MaxActiveRentals => 2;
+
+    public Student(string firstName, string lastName) : base(firstName, lastName)
+    {
+    }
 }

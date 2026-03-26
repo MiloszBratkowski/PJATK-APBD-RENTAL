@@ -1,10 +1,18 @@
-﻿namespace PJATK_APBD_RENTAL.Models;
+﻿namespace PJATK_APBD_RENTAL.Models.Actors;
 
-public class User
+public abstract class User
 {
-    private int id;
-    private string name;
-    private string surname;
+    public Guid Id { get; } = Guid.NewGuid();
     
+    public string FirstName { get; set; }
     
+    public string LastName { get; set; }
+
+    public abstract int MaxActiveRentals { get; }
+
+    protected User(string firstName, string lastName)
+    {
+        FirstName = firstName;
+        LastName = lastName;
+    }
 }
