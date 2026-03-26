@@ -1,22 +1,23 @@
-﻿namespace PJATK_APBD_RENTAL.Models;
+﻿using PJATK_APBD_RENTAL.Models.Actors;
+
+namespace PJATK_APBD_RENTAL.Models;
 
 public class Rental
 {
-    private int _rentalID;
-    private Equipment _equipment;
-    private Student _student;
-    private Employee _employee;
-    private DateTime startRentalDate;
-    private DateTime endRentalDate;
-    private DateTime realBackDate;
+    public Guid Id { get; } = Guid.NewGuid();
+    public User User { get; set; }
+    public Equipment Item { get; set; }
+    public DateTime RentalDate { get; set; }
+    public DateTime DueDate { get; set; }
+    public DateTime? ActualReturnDate { get; set; }
+    public decimal Penalty { get; set; } = 0;
 
-    public Rental(Student student, Employee employee, Equipment equipment, DateTime startRentalDate, DateTime endRentalDate)
+    public Rental(User user, Equipment item, DateTime rentalDate, int daysToReturn)
     {
-        this._student = student;
-        this._employee = employee;
-        this._equipment = equipment;
-        this.startRentalDate = startRentalDate;
-        this.endRentalDate = endRentalDate;
+        User = user;
+        Item = item;
+        RentalDate = rentalDate;
+        DueDate = rentalDate.AddDays(daysToReturn);
     }
     
 }
