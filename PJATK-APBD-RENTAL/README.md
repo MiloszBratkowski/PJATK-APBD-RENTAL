@@ -6,7 +6,7 @@ Konsolowy system obsługi wypożyczalni sprzętu uczelnianego. Projekt kładzie 
 
 ## Architektura i Decyzje Projektowe
 
-W rozwiązaniu rozdzielono model domenowy od logiki wykonywania operacji i interfejsu konsolowego, dbając o to, by klasy miały jedną wyraźną odpowiedzialność[cite: 52].
+W rozwiązaniu rozdzielono model domenowy od logiki wykonywania operacji i interfejsu konsolowego, dbając o to, by klasy miały jedną wyraźną odpowiedzialność.
 
 ### 1. High Cohesion
 * **Podział Models na podfoldery (Actors i Equipment):** Zamiast jednej zbiorczej klasy, rozdzielono encje na logiczne grupy. Klasy reprezentują konkretne obiekty domenowe (użytkownicy vs sprzęt), co ułatwia rozwój i nawigację w projekcie.
@@ -19,3 +19,9 @@ W rozwiązaniu rozdzielono model domenowy od logiki wykonywania operacji i inter
 ### 3. Hermetyzacja
 * **Właściwości { get; set; }:** Zastosowanie auto-properties umożliwia łatwą implementację walidacji w przyszłości bez zmiany interfejsu publicznego klas.
 * **Unikalne ID:** Identyfikatory `Guid` są generowane automatycznie przy tworzeniu obiektu.
+
+---
+
+## Instrukcja uruchomienia
+
+Wystarczy uruchomić program, w pierwszej kolejności wykona się kod demonstracyjny, następnie zostanie uruchomiona konsola do obsługi systemu.
