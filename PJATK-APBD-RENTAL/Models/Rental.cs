@@ -17,5 +17,6 @@ public class Rental
         this._equipment = equipment;
         this.startRentalDate = startRentalDate;
         this.endRentalDate = endRentalDate;
+        
     }
 }
