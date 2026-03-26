@@ -18,4 +18,5 @@ public class Rental
         this.startRentalDate = startRentalDate;
         this.endRentalDate = endRentalDate;
     }
+    
 }
