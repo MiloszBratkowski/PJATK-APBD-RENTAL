@@ -1,15 +1,23 @@
 ﻿namespace PJATK_APBD_RENTAL.Models;
 
-public class Equipment
+public abstract class Equipment
 {
-    private int id;
-    private string name;
-    private string description;
-    private Status status;
-    private enum Status
+    public Guid Id { get; private set; } = Guid.NewGuid();
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public EquipmentStatus Status { get; set; } = EquipmentStatus.Available;
+    
+    protected Equipment(string name, string description)
     {
-        DOSTĘPNY = 1,
-        WYPOŻYCZONY = 0
+        Name = name;
+        Description = description;
     }
     
+}
+
+public enum EquipmentStatus
+{
+    Available,    
+    Rented,       
+    Unavailable   
 }
